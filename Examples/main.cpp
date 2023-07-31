@@ -23,23 +23,30 @@ bool copy(const AnyReader& reader, AnyWriter& writer){
 }
 
 int main(){
-	//KeyboardReader klavyeOkuyucu;
-	//TerminalWriter terminalYazici;
+	KeyboardReader klavyeOkuyucu;
+	TerminalWriter terminalYazici;
 	cout << "before copy\n";
-	//copy(klavyeOkuyucu,terminalYazici);
+	copy(klavyeOkuyucu,terminalYazici);
 	cout << "after copy: \n";
 	
 	string inputFilename,outputFilename;
-	cout << "Enter the input file: ";
+	//cout << "Enter the input file: ";
 	//cin >> inputFilename;
-	cout << "Enter the output file: ";
+	//cout << "Enter the output file: ";
 	//cin >> outputFilename;
 	inputFilename = "inputfile.txt";
+	cout << "Input file name: " << inputFilename << endl;
 	outputFilename = "outputfile.txt";
-	 FileReader fileReader(inputFilename);
-	 cout << "sf";
+	cout << "Output file name: " << outputFilename << endl;
+	FileReader fileReader(inputFilename);
 	FileWriter fileWriter(outputFilename);
 	
-	copy(fileReader,fileWriter);
+	if(copy(fileReader,fileWriter)){
+		cout << "Copy successful.\n";
+	}else{
+		cout << "Copy failed!\n";
+	}
+	//copy(fileReader,fileWriter);
+	
 	return 0;
 }

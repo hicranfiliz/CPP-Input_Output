@@ -5,7 +5,7 @@
 
 class KeyboardReader : public AnyReader {
 public:
-     char getchar()  const;
+     char getchar() const override;
 };
 
 #endif // KEYBOARDREADER_HPP

@@ -8,7 +8,7 @@ class FileWriter : public AnyWriter {
 	public:
 		FileWriter(const std::string& filename);
 		
-		  void putchar(char ch) const;
+		  void putchar(char ch);
 		
 	private:
 		std::ofstream file;
