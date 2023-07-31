@@ -3,7 +3,7 @@
 
 class AnyReader {
 public:
-    virtual char getchar() = 0;
+    virtual char getchar() const = 0;
     virtual ~AnyReader() {} //destructor
 };
 

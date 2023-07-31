@@ -8,7 +8,7 @@ class FileReader : public AnyReader {
 	public:
 		FileReader(const std::string& filename);
 		
-		virtual  char getchar() const override; 
+		  char getchar() const override ; 
 		
 	private:
 		std::ifstream file;
